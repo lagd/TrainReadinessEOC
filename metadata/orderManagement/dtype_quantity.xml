@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataType name="orderManagement.quantity">
+  <extends>dtype_com.conceptwave.system.Integer</extends>
+  <label>Quantity</label>
+  <length>3</length>
+  <maxValue>200</maxValue>
+  <metaVersion>25</metaVersion>
+  <minValue>0</minValue>
+</dataType>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<document name="orderManagement.orderDataSearchResult">
+  <dbSchema>ORDER</dbSchema>
+  <extends>doc_com.conceptwave.system.Document</extends>
+  <generatedKey>true</generatedKey>
+  <guid>{7bc3ffa8-ca6a-4b02-b626-ff42150f08a7}</guid>
+  <label>Order Data Search Result</label>
+  <metaVersion>25</metaVersion>
+  <variableList>
+    <variable name="creditApprovalNumber" type="leaf">
+      <valueType>dtype_orderManagement.creditApprovalNumber</valueType>
+    </variable>
+    <variable name="creditDecision" type="leaf">
+      <valueType>dtype_orderManagement.creditDecision</valueType>
+    </variable>
+    <variable name="customerReference" type="leaf">
+      <valueType>dtype_orderManagement.customerReference</valueType>
+    </variable>
+    <variable name="partNumber" type="leaf">
+      <valueType>dtype_orderManagement.partNumber</valueType>
+    </variable>
+    <variable name="purchaseOrderNumber" type="leaf">
+      <valueType>dtype_orderManagement.purchaseOrderNumber</valueType>
+    </variable>
+    <variable name="quantity" type="leaf">
+      <valueType>dtype_orderManagement.quantity</valueType>
+    </variable>
+    <variable name="cwDocId" type="leaf">
+      <key>1</key>
+      <valueType>dtype_cwf.cwDocId</valueType>
+    </variable>
+  </variableList>
+  <UserInterface name="UserInterface" type="ui">
+    <extends>doc_com.conceptwave.system.Document/ui_UserInterface</extends>
+    <variableList>
+      <variable name="model" type="uivar">
+        <label>model</label>
+        <valueType>doc_orderManagement.orderDataSearchResult</valueType>
+      </variable>
+    </variableList>
+    <vformList>
+      <vform name="Forms" type="frmui">
+        <extends>doc_com.conceptwave.system.Document/ui_UserInterface/frmui_Forms</extends>
+        <overlayList>
+          <overlay name="orderDataSearchForm" type="vform">
+            <label>orderDataSearchForm</label>
+            <root name="orderDataSearchFormGrid_vCentering" type="elvltstck">
+              <height>100%</height>
+              <membersMargin>5</membersMargin>
+              <width>100%</width>
+              <elementList>
+                <element name="orderDataSearchGrid" type="elgrd">
+                  <numOfCols>3</numOfCols>
+                  <useDefaultHeight>true</useDefaultHeight>
+                  <elementList>
+                    <element name="orderDataSearchHeader" type="elhdr">
+                      <label>Order Data Search</label>
+                    </element>
+                    <element name="creditApprovalNumber" type="elfld">
+                      <variable type="varPath">
+                        <variablePathList>
+                          <variablePath>doc_orderManagement.orderDataSearchResult/ui_UserInterface/uivar_model</variablePath>
+                          <variablePath>doc_orderManagement.orderDataSearchResult/leaf_creditApprovalNumber</variablePath>
+                        </variablePathList>
+                      </variable>
+                    </element>
+                    <element name="creditDecision" type="elslct">
+                      <sorted>false</sorted>
+                      <variable type="varPath">
+                        <variablePathList>
+                          <variablePath>doc_orderManagement.orderDataSearchResult/ui_UserInterface/uivar_model</variablePath>
+                          <variablePath>doc_orderManagement.orderDataSearchResult/leaf_creditDecision</variablePath>
+                        </variablePathList>
+                      </variable>
+                    </element>
+                    <element name="customerReference" type="elref">
+                      <variable type="varPath">
+                        <variablePathList>
+                          <variablePath>doc_orderManagement.orderDataSearchResult/ui_UserInterface/uivar_model</variablePath>
+                          <variablePath>doc_orderManagement.orderDataSearchResult/leaf_customerReference</variablePath>
+                        </variablePathList>
+                      </variable>
+                    </element>
+                    <element name="partNumber" type="elfld">
+                      <variable type="varPath">
+                        <variablePathList>
+                          <variablePath>doc_orderManagement.orderDataSearchResult/ui_UserInterface/uivar_model</variablePath>
+                          <variablePath>doc_orderManagement.orderDataSearchResult/leaf_partNumber</variablePath>
+                        </variablePathList>
+                      </variable>
+                    </element>
+                    <element name="purchaseOrderNumber" type="elfld">
+                      <variable type="varPath">
+                        <variablePathList>
+                          <variablePath>doc_orderManagement.orderDataSearchResult/ui_UserInterface/uivar_model</variablePath>
+                          <variablePath>doc_orderManagement.orderDataSearchResult/leaf_purchaseOrderNumber</variablePath>
+                        </variablePathList>
+                      </variable>
+                    </element>
+                    <element name="quantity" type="elfld">
+                      <variable type="varPath">
+                        <variablePathList>
+                          <variablePath>doc_orderManagement.orderDataSearchResult/ui_UserInterface/uivar_model</variablePath>
+                          <variablePath>doc_orderManagement.orderDataSearchResult/leaf_quantity</variablePath>
+                        </variablePathList>
+                      </variable>
+                    </element>
+                  </elementList>
+                </element>
+              </elementList>
+            </root>
+          </overlay>
+        </overlayList>
+      </vform>
+    </vformList>
+  </UserInterface>
+</document>

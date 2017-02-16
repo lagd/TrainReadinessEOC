@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<interface name="humanInterfaces.provitioningInterface">
+  <label>Provitioning Interface</label>
+  <metaVersion>25</metaVersion>
+  <operationList>
+    <operation name="doProvitioning" type="oper">
+      <label>Do Provitioning</label>
+      <type>One-Way</type>
+    </operation>
+    <operation name="provitioningComplete" type="oper">
+      <label>Provitioning Complete</label>
+      <type>Notification</type>
+    </operation>
+  </operationList>
+  <revision>1</revision>
+</interface>

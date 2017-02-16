@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<document name="customerManagement.customerSearch">
+  <dbSchema>ORDER</dbSchema>
+  <extends>doc_com.conceptwave.system.Document</extends>
+  <guid>{e625c5a5-3189-44c6-902c-b21e751141b3}</guid>
+  <label>Customer Search</label>
+  <metaVersion>25</metaVersion>
+  <variableList>
+    <variable name="customerName" type="leaf">
+      <valueType>dtype_customerManagement.customerName</valueType>
+    </variable>
+    <variable name="customerReference" type="leaf">
+      <valueType>dtype_orderManagement.customerReference</valueType>
+    </variable>
+    <variable name="marketSegment" type="leaf">
+      <valueType>dtype_customerManagement.marketSegment</valueType>
+    </variable>
+    <variable name="createdBefore" type="leaf">
+      <valueType>dtype_com.conceptwave.system.Date</valueType>
+    </variable>
+    <variable name="createdAfter" type="leaf">
+      <valueType>dtype_com.conceptwave.system.Date</valueType>
+    </variable>
+  </variableList>
+  <UserInterface name="UserInterface" type="ui">
+    <extends>doc_com.conceptwave.system.Document/ui_UserInterface</extends>
+    <variableList>
+      <variable name="model" type="uivar">
+        <label>model</label>
+        <valueType>doc_customerManagement.customerSearch</valueType>
+      </variable>
+    </variableList>
+    <vformList>
+      <vform name="Forms" type="frmui">
+        <extends>doc_com.conceptwave.system.Document/ui_UserInterface/frmui_Forms</extends>
+        <overlayList>
+          <overlay name="formularioBusquedaCustomer" type="vform">
+            <label>formularioBusquedaCustomer</label>
+            <root name="formularioBusquedaCustomerGrid_vCentering" type="elvltstck">
+              <height>100%</height>
+              <membersMargin>5</membersMargin>
+              <width>100%</width>
+              <elementList>
+                <element name="customerSearchGrid" type="elgrd">
+                  <numOfCols>2</numOfCols>
+                  <useDefaultHeight>true</useDefaultHeight>
+                  <elementList>
+                    <element name="customerSearchHeader" type="elhdr">
+                      <label>Busqueda de Cliente</label>
+                      <visible type="varPath">
+                        <variablePathList>
+                          <variablePath>dtype_com.conceptwave.system.Boolean/leaf_TRUE</variablePath>
+                        </variablePathList>
+                      </visible>
+                    </element>
+                    <element name="customerName" type="elfld">
+                      <label>Nombre Cliente</label>
+                      <variable type="varPath">
+                        <variablePathList>
+                          <variablePath>doc_customerManagement.customerSearch/ui_UserInterface/uivar_model</variablePath>
+                          <variablePath>doc_customerManagement.customerSearch/leaf_customerName</variablePath>
+                        </variablePathList>
+                      </variable>
+                    </element>
+                    <element name="marketSegment" type="elslct">
+                      <label>Segmento Mercado</label>
+                      <sorted>false</sorted>
+                      <variable type="varPath">
+                        <variablePathList>
+                          <variablePath>doc_customerManagement.customerSearch/ui_UserInterface/uivar_model</variablePath>
+                          <variablePath>doc_customerManagement.customerSearch/leaf_marketSegment</variablePath>
+                        </variablePathList>
+                      </variable>
+                    </element>
+                    <element name="createdBefore" type="eldate">
+                      <label>Creado Antes de</label>
+                      <showPickerIcon>false</showPickerIcon>
+                      <variable type="varPath">
+                        <variablePathList>
+                          <variablePath>doc_customerManagement.customerSearch/ui_UserInterface/uivar_model</variablePath>
+                          <variablePath>doc_customerManagement.customerSearch/leaf_createdBefore</variablePath>
+                        </variablePathList>
+                      </variable>
+                    </element>
+                    <element name="createdAfter" type="eldate">
+                      <label>Creado después de</label>
+                      <showPickerIcon>false</showPickerIcon>
+                      <variable type="varPath">
+                        <variablePathList>
+                          <variablePath>doc_customerManagement.customerSearch/ui_UserInterface/uivar_model</variablePath>
+                          <variablePath>doc_customerManagement.customerSearch/leaf_createdAfter</variablePath>
+                        </variablePathList>
+                      </variable>
+                    </element>
+                    <element name="customerReference" type="elslct">
+                      <variable type="varPath">
+                        <variablePathList>
+                          <variablePath>doc_customerManagement.customerSearch/ui_UserInterface/uivar_model</variablePath>
+                          <variablePath>doc_customerManagement.customerSearch/leaf_customerReference</variablePath>
+                        </variablePathList>
+                      </variable>
+                    </element>
+                  </elementList>
+                </element>
+              </elementList>
+            </root>
+          </overlay>
+        </overlayList>
+      </vform>
+    </vformList>
+  </UserInterface>
+</document>

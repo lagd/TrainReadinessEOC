@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<interface name="humanInterfaces.creditAnalysisInterface">
+  <label>Credit Analysis Interface</label>
+  <metaVersion>25</metaVersion>
+  <operationList>
+    <operation name="doCreditAnalysis" type="oper">
+      <label>Do Credit Analysis</label>
+      <type>One-Way</type>
+    </operation>
+    <operation name="acceptCredit" type="oper">
+      <label>Accept Credit</label>
+      <type>Notification</type>
+    </operation>
+    <operation name="rejectCredit" type="oper">
+      <label>Reject Credit</label>
+      <type>Notification</type>
+    </operation>
+    <operation name="creditAnalysisComplete" type="oper">
+      <label>Credit Analysis Complete</label>
+      <type>Notification</type>
+    </operation>
+  </operationList>
+  <revision>2</revision>
+</interface>

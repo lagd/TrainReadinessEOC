@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project>
+  <DefaultDB>ORACLE THIN</DefaultDB>
+  <applicationString>Training Metadata</applicationString>
+  <applicationVersionString>1</applicationVersionString>
+  <databasesMap>
+    <databases key="ORACLE THIN" type=".configdb">
+      <dbname>ORACLE THIN</dbname>
+      <driver type=".dbdriver">
+        <attributes>localhost;1521;orcl;false</attributes>
+        <driverType>Oracle thin</driverType>
+      </driver>
+      <password>ACCE13A4C43EDDAF</password>
+      <user>c##train</user>
+    </databases>
+  </databasesMap>
+  <excludedBuildWar>.bak</excludedBuildWar>
+  <excludedResource>.svn</excludedResource>
+  <nodeString>PE_UI</nodeString>
+  <skin>Enterprise</skin>
+</project>

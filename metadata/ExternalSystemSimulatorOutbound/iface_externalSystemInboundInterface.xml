@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<interface name="ExternalSystemSimulatorOutbound.externalSystemInboundInterface">
+  <label>externalSystemInboundInterface</label>
+  <metaVersion>25</metaVersion>
+  <operationList>
+    <operation name="GPgetCreditApprovalNumberRequest" type="oper">
+      <input>dstruct_ExternalSystemSimulatorOutbound.getCreditApprovalNumberRequest</input>
+      <label>GPgetCreditApprovalNumberRequest</label>
+      <type>One-Way</type>
+    </operation>
+    <operation name="extSysInboundGetCreditApprovalNumber" type="oper">
+      <input>dstruct_ExternalSystemSimulatorOutbound.getCreditApprovalNumberRequest</input>
+      <label>extSysInboundGetCreditApprovalNumber</label>
+      <output>dstruct_ExternalSystemSimulatorOutbound.ack</output>
+      <type>Request-Response</type>
+    </operation>
+  </operationList>
+  <revision>1</revision>
+</interface>

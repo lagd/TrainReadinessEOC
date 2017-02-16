@@ -18,4 +18,8 @@
   </locale>
   <metaVersion>25</metaVersion>
   <metadataVersion>20150818</metadataVersion>
+  <templateList>
+    <template>EXTSYSCOMMUNICATION</template>
+    <template>ExternalSystemSimulator</template>
+  </templateList>
 </header>

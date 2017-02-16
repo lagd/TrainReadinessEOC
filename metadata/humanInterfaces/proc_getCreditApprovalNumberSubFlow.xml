@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<process name="humanInterfaces.getCreditApprovalNumberSubFlow">
+  <activity name="start" type="seqActivity">
+    <label>start</label>
+    <x>39.0</x>
+    <y>191.0</y>
+    <childList>
+      <child name="sendCreditApprovalNumberToExternalSystem" type="opActivity">
+        <element>iface_ExternalSystemSimulatorOutbound.externalSystemInboundInterface/oper_extSysInboundGetCreditApprovalNumber</element>
+        <label>sendCreditApprovalNumberToExternalSystem</label>
+        <participant>part_ExternalSystemSimulatorOutbound.extSysOutboundCommunicationPart</participant>
+        <x>207.0</x>
+        <y>193.0</y>
+        <childList>
+          <child name="receiveCreditApprovalNumberFromExternalSystem" type="opActivity">
+            <element>iface_ExternalSystemCommunication.processInterface/oper_GetCreditApprovalNumberResponse</element>
+            <label>Receive Credit Approval Number From External System</label>
+            <participant>part_ExternalSystemCommunication.extSysCommunicationPart</participant>
+            <x>625.0</x>
+            <y>214.0</y>
+            <methodList>
+              <method name="cwOnProcActAfter" type="action">
+                <category>script</category>
+                <system>true</system>
+                <script><![CDATA[
+                  humanInterfaces.debug();
+                  var a = 1;
+                ]]></script>
+              </method>
+            </methodList>
+          </child>
+        </childList>
+        <methodList>
+          <method name="cwOnProcActBefore" type="action">
+            <category>before</category>
+            <system>true</system>
+            <script><![CDATA[
+              this.activityData.origin.originProcess = this.process.id;
+              this.activityData.origin.originOrder = this.process.processOrder.id;
+              this.activityData.creditApprovalNumberOld = this.process.processOrder.orderData.creditApprovalNumber;
+              humanInterfaces.debug();
+            ]]></script>
+          </method>
+        </methodList>
+      </child>
+      <child name="extSysOutboundCommunicationPart" type="participantActivity">
+        <label>extSysOutboundCommunicationPart</label>
+        <participant>part_ExternalSystemSimulatorOutbound.extSysOutboundCommunicationPart</participant>
+        <x>240.0</x>
+        <y>42.0</y>
+      </child>
+      <child name="extSysCommunicationPart" type="participantActivity">
+        <label>extSysCommunicationPart</label>
+        <participant>part_ExternalSystemCommunication.extSysCommunicationPart</participant>
+        <x>559.0</x>
+        <y>71.0</y>
+      </child>
+    </childList>
+  </activity>
+  <curRevision>true</curRevision>
+  <label>getCreditApprovalNumberSubFlow</label>
+  <metaVersion>25</metaVersion>
+  <priority>8</priority>
+  <type>Sub-flow</type>
+</process>

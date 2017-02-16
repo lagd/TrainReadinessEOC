@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataStructure name="ExternalSystemSimulatorOutbound.ack">
+  <container>true</container>
+  <description>ack</description>
+  <label>ack</label>
+  <metaVersion>25</metaVersion>
+  <childList>
+    <child name="code" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_com.conceptwave.system.String</element>
+      <label>code</label>
+    </child>
+    <child name="description" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_com.conceptwave.system.String</element>
+      <label>description</label>
+    </child>
+  </childList>
+</dataStructure>

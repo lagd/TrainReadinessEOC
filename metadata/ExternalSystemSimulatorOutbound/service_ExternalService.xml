@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<externalService name="ExternalSystemSimulatorOutbound.ExternalService">
+  <label>ExternalService</label>
+  <metaVersion>25</metaVersion>
+  <portList>
+    <port name="extSysInboundSOAPPort" type="port">
+      <binding>bind_ExternalSystemSimulatorOutbound.ExtSysInboundSOAPBinding</binding>
+      <label>extSysInboundSOAPPort</label>
+      <recover>5</recover>
+    </port>
+  </portList>
+</externalService>

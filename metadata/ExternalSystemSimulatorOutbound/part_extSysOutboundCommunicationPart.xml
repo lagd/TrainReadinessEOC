@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<participant name="ExternalSystemSimulatorOutbound.extSysOutboundCommunicationPart">
+  <invokeDirectly>true</invokeDirectly>
+  <label>extSysOutboundCommunicationPart</label>
+  <metaVersion>25</metaVersion>
+  <participant>iface_ExternalSystemSimulatorOutbound.externalSystemInboundInterface</participant>
+</participant>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<binding name="ExternalSystemSimulatorOutbound.ExtSysInboundSOAPBinding">
+  <extensionList>
+    <extension name="GPgetCreditApprovalNumberRequest" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="soapAction">GPgetCreditApprovalNumberRequest</elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="GPgetCreditApprovalNumberRequest$Input" type="ext">
+      <element>Message</element>
+      <elementItemMap>
+        <elementItem key="use">literal</elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="extSysInboundGetCreditApprovalNumber" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="soapAction">extSysInboundGetCreditApprovalNumber</elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="extSysInboundGetCreditApprovalNumber$Input" type="ext">
+      <element>Message</element>
+      <elementItemMap>
+        <elementItem key="use">literal</elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="extSysInboundGetCreditApprovalNumber$Output" type="ext">
+      <element>Message</element>
+      <elementItemMap>
+        <elementItem key="use">literal</elementItem>
+      </elementItemMap>
+    </extension>
+  </extensionList>
+  <interface>iface_ExternalSystemSimulatorOutbound.externalSystemInboundInterface</interface>
+  <label>ExtSysInboundSOAPBinding</label>
+  <metaVersion>25</metaVersion>
+  <provider>prov_cwf.soapprov</provider>
+</binding>

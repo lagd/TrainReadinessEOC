@@ -103,6 +103,12 @@
                                     <x>920.0</x>
                                     <y>497.0</y>
                                     <childList>
+                                      <child name="getNewCreditApprovalNumber" type="subflowActivity">
+                                        <element>proc_humanInterfaces.getCreditApprovalNumberSubFlow</element>
+                                        <label>Get New Credit Approval Number</label>
+                                        <x>986.0</x>
+                                        <y>590.0</y>
+                                      </child>
                                       <child name="doProvisioning" type="opActivity">
                                         <element>iface_humanInterfaces.provitioningInterface/oper_doProvitioning</element>
                                         <label>Do Provisioning</label>
@@ -184,5 +190,11 @@
   <label>mainProcess</label>
   <metaVersion>25</metaVersion>
   <priority>8</priority>
+  <subflowReferenceList>
+    <subflowReference type="sref">
+      <revision>1</revision>
+      <subflow>proc_humanInterfaces.getCreditApprovalNumberSubFlow</subflow>
+    </subflowReference>
+  </subflowReferenceList>
   <type>User</type>
 </process>

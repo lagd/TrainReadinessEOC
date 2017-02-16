@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <dataType name="orderManagement.myPrivilege">
+  <enumeration type="enum">
+    <valueList>
+      <value name="Add Shared Favorites" type="enumItem" code="AddFavorite"/>
+      <value name="Administration App" type="enumItem" code="CWAdminApp"/>
+      <value name="Common Business Configuration" type="enumItem" code="cwt_coba"/>
+      <value name="Conceptwave API Access" type="enumItem" code="CWApi"/>
+      <value name="Delegate Task" type="enumItem" code="WDelegate"/>
+      <value name="Delete Shared Favorites" type="enumItem" code="DelFavorite"/>
+      <value name="Everyone" type="enumItem" code="Everyone"/>
+      <value name="Get Available" type="enumItem" code="WGAvailable"/>
+      <value name="Group Manager" type="enumItem" code="WGManager"/>
+      <value name="Local Profile Administrator" type="enumItem" code="LPAdmin"/>
+      <value name="Modify Shared Favorites" type="enumItem" code="ModFavorite"/>
+      <value name="Privilegio CA" type="enumItem" code="caPriv"/>
+      <value name="Privilegio Prov" type="enumItem" code="provPriv"/>
+      <value name="Process Manager Administrator" type="enumItem" code="PMAdmin"/>
+      <value name="Return Task" type="enumItem" code="WReturn"/>
+      <value name="Runtime Administrator" type="enumItem" code="RTAdmin"/>
+      <value name="Set Process Priority" type="enumItem" code="PRPriority"/>
+      <value name="Set User Availability" type="enumItem" code="WLSetAvailable"/>
+      <value name="Show Error Details" type="enumItem" code="ShowError"/>
+      <value name="Subscription Configuration" type="enumItem" code="cwt_subscription"/>
+      <value name="Take on Task" type="enumItem" code="WTakeOn"/>
+      <value name="User Profile Administrator" type="enumItem" code="UPAdmin"/>
+      <value name="Wizard Configuration" type="enumItem" code="cwt_wzConfig"/>
+      <value name="Workgroup Select" type="enumItem" code="WGSelect"/>
+      <value name="Worklist Administrator" type="enumItem" code="WLAdmin"/>
+      <value name="privilegio CS" type="enumItem" code="csPriv"/>
+      <value name="a" type="enumItem" code="a"/>
+    </valueList>
+  </enumeration>
   <extends>dtype_cwf.privilege</extends>
   <label>My Privilege</label>
   <metaVersion>25</metaVersion>
